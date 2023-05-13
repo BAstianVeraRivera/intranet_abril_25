@@ -55,30 +55,9 @@ public class GestorDatos {
             e.printStackTrace();
         }
     }
-
-    public String buscarVehiculo(String nombre) {
+    public Estudiante buscarEstudiantePorNombre(String nombre) {
         try {
-            FileReader fr = new FileReader(archivoVehiculo);
-            BufferedReader br = new BufferedReader(fr);
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                String[] datos = linea.split(",");
-                if (datos[0].equals(nombre)) {
-                    br.close();
-                    fr.close();
-                    return datos[1];
-                }
-            }
-            br.close();
-            fr.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-    public Vehiculo buscarVehiculoPorNombre(String nombre) {
-        try {
-            FileReader fr = new FileReader(archivoVehiculo);
+            FileReader fr = new FileReader(archivoEstudiante);
             BufferedReader br = new BufferedReader(fr);
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -86,7 +65,7 @@ public class GestorDatos {
                 if (datos[0].equals(nombre )) {
                     br.close();
                     fr.close();
-                    return new Vehiculo(datos[0], Integer.parseInt(datos[1]), Integer.parseInt(datos[2]), Integer.parseInt(datos[3]), datos[4], datos[5]);
+                    return new Estudiante(datos[0], datos[1], datos[2], datos[3]);
                 }
             }
             br.close();

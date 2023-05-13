@@ -4,7 +4,7 @@ public class Estudiante {
 	private String nombre;
 	private String apellido;
 	private String rut;
-	private int matricula;
+	private String matricula;
 	public Carrera unnamed_Carrera_;
 
 	public String getNombre() {
@@ -31,15 +31,15 @@ public class Estudiante {
 		this.rut = rut;
 	}
 
-	public int getMatricula() {
+	public String getMatricula() {
 		return this.matricula;
 	}
 
-	public void setMatricula(int matricula) {
+	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
 
-	public Estudiante(String nombre, String apellido, String rut, int matricula) {
+	public Estudiante(String nombre, String apellido, String rut, String matricula) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.rut = rut;

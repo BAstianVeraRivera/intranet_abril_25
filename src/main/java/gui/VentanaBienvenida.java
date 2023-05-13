@@ -31,7 +31,7 @@ public class VentanaBienvenida extends Ventana implements ActionListener {
 
     private void agregarComponentes() {
         panel.add(btnRegistrarCarrera);
-        panel.add(btnBuscarEstudiante);
+        panel.add(btnRegistrarEstudiante);
         panel.add(btnBuscarEstudiante);
         panel.add(btnSalir);
 
@@ -48,13 +48,13 @@ public class VentanaBienvenida extends Ventana implements ActionListener {
     public void actionPerformed(ActionEvent accion) {
         if (accion.getSource() == btnRegistrarCarrera) {
             dispose();
-            new VentanaRegistroCarrera("Registrar vehículo", 300, 200, gestor);
+            new VentanaRegistroCarrera("Registrar carrera", 400, 200, gestor);
         } else if (accion.getSource() == btnRegistrarEstudiante) {
             dispose();
-            new VentanaRegistroEstudiante("Registrar cliente", 300, 200, gestor);
+            new VentanaRegistroEstudiante("Registrar estudiante", 400, 200, gestor);
         } else if (accion.getSource() == btnBuscarEstudiante) {
             dispose();
-            new VentanaBuscarEstudiante("Buscar vehículo", 300, 200, gestor);
+            new VentanaBuscarEstudiante("Buscar estudiante", 400, 200, gestor);
         } else if (accion.getSource() == btnSalir) {
             System.exit(0);
         }
